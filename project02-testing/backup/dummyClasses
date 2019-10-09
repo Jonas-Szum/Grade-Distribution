@@ -1,0 +1,46 @@
+Course C("CS", "Professional Seminar", 499, 01, "Hummel", 
+             /*A-F*/ 0, 0, 0, 0, 0, 
+             /*I,S,U,W,NR*/ 2, 88, 0, 0, 1); 
+
+Course D("CS", "Soulja Boy", 500, 01, "Hummel",
+             /*A-F*/ 5, 10, 20, 40, 3,
+             /*I,S,U,W,NR*/ 7, 0, 0, 4, 1);
+
+Course E("SOC", "A$AP Rocky", 501, 01, "Theys",
+             /*A-F*/ 5, 0, 10, 20, 9,
+             /*I,S,U,W,NR*/ 3, 0, 0, 12, 20);
+
+//Now begins Dept dummies
+Dept nameless();
+nameless.Courses.push_back(C);
+nameless.Courses.push_back(D);
+nameless.Courses.push_back(E);
+
+
+Dept named("LAS"); 
+
+Course F("HIST", "American History", 499, 01, "Hummel",
+             /*A-F*/ 0, 0, 0, 0, 0,
+             /*I,S,U,W,NR*/ 2, 85, 4, 0, 1); 
+Course G("HIST", "European History", 500, 01, "Hummel",
+             /*A-F*/ 5, 14, 20, 44, 3,
+             /*I,S,U,W,NR*/ 7, 0, 0, 4, 1); 
+Course H("HIST", "Chinese History", 501, 01, "Theys",
+             /*A-F*/ 5, 20, 10, 20, 9,
+             /*I,S,U,W,NR*/ 3, 0, 0, 6, 11);
+
+named.Courses.push_back(F);
+named.Courses.push_back(G);
+named.Courses.push_back(H);
+
+
+College unnamedCollege();
+unnamedCollege.Depts.push_back(unnamed);
+unnamedCollege.Depts.push_back(named);
+
+Dept unnamed2 = unnamed;
+Dept named2 = named;
+
+College namedCollege("UIC");
+namedCollege.push_back(unnamed2);
+namedCollege.push_back(named2);
